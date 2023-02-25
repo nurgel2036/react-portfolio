@@ -11,6 +11,7 @@ const OutFlipImg = () => {
         {flipData.map((item) => (
           <FlipImg item={item} key={item.id} />
         ))}
+        
       </div>
     </div>
     </>

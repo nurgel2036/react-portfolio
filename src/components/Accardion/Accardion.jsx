@@ -1,44 +1,62 @@
+import Accordion from "react-bootstrap/Accordion";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import "./Accardion.scss";
 import accardionData from "./AccardionData";
-
-import { AiOutlineDown } from "react-icons/ai";
-
-export default function OutAccardion() {
-
+import "../Accardion/Accardion.scss";
+const COURSES = [ 
+    { 
+       background: "linear-gradient(90deg, rgba(88,204,219,1) 0%, rgba(218,78,122,1) 100%)", 
+       name:"UI/UX design", 
+      }, 
+    {  
+      background: "linear-gradient(90deg, rgba(218,78,122,1) 0%, rgba(122,78,218,1) 100%)", 
+      name: 'Frontend' 
+     }, 
+    {  
+      background: "linear-gradient(90deg, rgba(88,144,219,1) 0%, rgba(218,78,122,1) 100%)", 
+    }, 
+    {  
+      background: "linear-gradient(90deg, rgba(218,78,122,1) 0%, rgba(88,144,219,1) 100%)", 
+      name: "Backend" 
+    }, 
+    {  
+      background: "linear-gradient(90deg, rgba(122,78,218,1) 0%, rgba(218,78,122,1) 100%)", 
+      name: "HTML" 
+    }, 
+     
+    {  
+      background: "linear-gradient(90deg, rgba(218,78,122,1) 0%, rgba(88,204,219,1) 100%)", 
+      name: "Python" 
+    },
+    {  
+      background: "linear-gradient(90deg, rgba(122,78,218,1) 0%, rgba(218,78,122,1) 100%)", 
+      name: "CSS" 
+    }, 
+    {  
+      background: "linear-gradient(90deg, rgba(122,78,218,1) 0%, rgba(88,144,219,1) 100%)", 
+      name: "Django" 
+    } 
+    
+  ];
+function Accardion() {
   return (
     <div className="out-accardion">
-      <div className="main-accardion">
-      <div className="accardion">
-        <button className="accardion-visible">
-          <h1> А я точно смогу стать программистом?</h1>
-          <span>
-            {" "}
-            <AiOutlineDown />
-          </span>
-        </button>
-        <div 
-            className="accardion-toggle"   
-            >
-          <p>
-            Заниматься разработкой может каждый. Курсы начинаются с азов,
-            поэтому никаких дополнительных знаний в сфере IT от вас не
-            потребуется. Чтобы стать программистом, вам не надо быть
-            математиком или инженером и обладать каким-то особым складом ума.
-            Чтобы успешно завершить курс, нужно лишь перестать сомневаться в
-            себе, не лениться и выполнять все задания.
-          </p>
-        </div>
-      </div>
+      <div className="main-accardion container">
+        {accardionData.map((item, i) => {
+          return (
+            <div className="double-main">
+                <Accordion id="accardion" key={i}>
+              <Accordion.Item eventKey="0" className="item">
+                <Accordion.Header className="header" style={{background: COURSES[i].background}}>{item.title}</Accordion.Header>
+                <Accordion.Body className="body">{item.description}</Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-const Accardion = () => {
-    return(
-        <>
-        
-        </>
-    )
-};
+export default Accardion;

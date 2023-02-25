@@ -4,30 +4,31 @@
     justify-content: center;
     margin-top: 60px;
     .main-accardion{
+        // background-color: rgb(98, 98, 98);
         width: 1400px;
         display: flex;
+        gap:30px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        position: relative;
+        
     }
 }
-
-.accardion-toggle{
-    height: 0;
-    opacity: 0;
-    color: #858585;
-    background: #fff;
-    text-align: left;
-    transition:
-    opacity 0.3s ease-in-out,
-    height 0.3s 0.3s ease-in-out;
-    padding: 20px;
-    margin: 15px 0;
-    border-left: 2px solid #858585;
+.accordion-button{
+    
+    background-color: linear-gradient(to right, #db7489, #e7a763) !important;
 }
-.animated{
-    opacity: 1;
-    transition: 
-    height 0.3s ease-in-out,
-    opacity 0.3s 0.3s ease-in-out;
+
+.double-main{
+    width: 500px;
+    .accordion{
+        outline: none;
+        .accordion-button{
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            outline: none !important;
+        }
+    }
 }
