@@ -1,17 +1,49 @@
-.out-helpField{
-    width: 100%;
+.out-helpField {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  background-image: url(./helpField-img/question_bg.jpg);
+  min-height: 300px;
+  .main-helpField {
+    width: 1400px;
     display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    .main-helpField{
-        width: 1400px;
-        display: flex;
-        justify-content: space-between;
-        background-image:url();
-        img{
-            width: 300px;
-            height: 300px;
-            padding: 150px;
-        }
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    .quest-bg-image {
+      background: url(./helpField-img/quest.png) center center/contain no-repeat;
+      width: 300px;
+      height: 300px;
+      padding: 150px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1;
     }
+    .quest-right {
+      display: flex;
+      width: 50%;
+      max-width: 800px;
+      margin-left: auto;
+      color: #fff;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+
+      justify-content: flex-end;
+      .quest-right1 {
+        color: #fff;
+        font-size: 36px;
+        width: 100%;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: right;
+        font-family: "Russo One", sans-serif;
+      }
+    }
+  }
 }

@@ -7,7 +7,12 @@ export default function HelpField() {
   return (
     <div className='out-helpField'>
       <div className="main-helpField">
-        <img src={quest1} alt="" />
+        <div className="quest-bg-image"></div>
+        <div className="quest-right">
+            <div className="quest-right1">Не знаете, какой курс <br /> подойдет именно вам ?</div>
+            <div className="quest-right2"></div>
+            <div className="quest-right3"></div>
+        </div>
       </div>
     </div>
   )
