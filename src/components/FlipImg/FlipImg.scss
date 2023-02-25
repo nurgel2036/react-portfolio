@@ -1,0 +1,70 @@
+body{
+    height: 200vh;
+}
+.out{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .mainFlipImg{
+      width: 1400px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      height: 640px;
+      .flipImg{
+        width: 420px;
+        height: 300px;
+        cursor: pointer;
+        position: relative;
+        .font{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          backface-visibility: hidden;
+          overflow: hidden;
+          transform: perspective(600px) rotateY(0deg);
+          position: absolute;
+          transition: .6s linear;
+          img{
+            width: 150px;
+            height: 140px;
+            margin-bottom: 15px;
+          }
+          div{
+            font-weight: bold;
+
+          }
+        }
+        .back{
+          width: 100%;
+          height: 100%;
+          display: flex;       
+          justify-content: center;
+          align-items: center;
+          backface-visibility: hidden;
+          overflow: hidden;
+          transform: perspective(600px) rotateY(180deg);
+          background-color: #fff;
+          position: absolute;
+          transition: .6s linear;
+          .back-content{
+            width: 420px;
+            text-align: center;
+          }
+        }
+        &:hover{
+          .font{
+            transform: perspective(600px) rotateY(-180deg);
+          }
+          .back{
+            transform: perspective(600px) rotateY(0deg);
+          }
+        }
+      }
+    }
+  }
