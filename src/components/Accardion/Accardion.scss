@@ -1,0 +1,33 @@
+.out-accardion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    .main-accardion{
+        width: 1400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.accardion-toggle{
+    height: 0;
+    opacity: 0;
+    color: #858585;
+    background: #fff;
+    text-align: left;
+    transition:
+    opacity 0.3s ease-in-out,
+    height 0.3s 0.3s ease-in-out;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 2px solid #858585;
+}
+.animated{
+    opacity: 1;
+    transition: 
+    height 0.3s ease-in-out,
+    opacity 0.3s 0.3s ease-in-out;
+}

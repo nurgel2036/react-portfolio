@@ -29,7 +29,7 @@ body{
           overflow: hidden;
           transform: perspective(600px) rotateY(0deg);
           position: absolute;
-          transition: .6s linear;
+          transition: .4s linear;
           img{
             width: 150px;
             height: 140px;
@@ -51,7 +51,7 @@ body{
           transform: perspective(600px) rotateY(180deg);
           background-color: #fff;
           position: absolute;
-          transition: .6s linear;
+          transition: .4s linear;
           .back-content{
             width: 420px;
             text-align: center;
